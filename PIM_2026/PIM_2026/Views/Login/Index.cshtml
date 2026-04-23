@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<main class="container">
+
+    <section class="login-box">
+
+        <h1>Área do Cliente</h1>
+        <p>Faça login para acessar seus agendamentos</p>
+
+        <form>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       placeholder="Digite seu e-mail"
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password"
+                       class="form-control"
+                       id="senha"
+                       placeholder="Digite sua senha"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-login w-100">
+                Entrar
+            </button>
+
+            <div class="extra-links">
+                <a href="#">Esqueci minha senha</a>
+                <a href="#">Criar conta</a>
+            </div>
+
+        </form>
+
+    </section>
+
+</main>

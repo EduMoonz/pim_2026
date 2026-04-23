@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Style System";
+}
+
+<main>
+    <section class="hero">
+        <h1>Erika Santana</h1>
+        <p>Especialista em manicure e nail design</p>
+        <p>Transformo suas unhas em verdadeiras obras de arte!</p>
+            
+        <a asp-controller="Login" asp-action="Index" class="btn btn-rosa">Agende seu horário</a>
+    </section>
+
+        
+    <section class="servicos">
+        <h2>Serviços oferecidos</h2>
+        <p>Confira nossos principais serviços</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-servico">
+                    <h3>Manicure Completa</h3>
+                    <p>R$45,00 </p>
+                    <p>45 min</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-servico">
+                    <h3>Pedicure Completa</h3>
+                    <p>R$50,00</p>
+                    <p>60min</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="localizacao">
+        <h2>Localização</h2>
+
+        <h3>Endereço</h3>
+        <p>Rua das Flores, 123 - Jardim Primavera<br />São Paulo - SP<br />CEP: 01234-567</p>
+            
+        <h3>Horário de Atendimento</h3>
+        <p>Segunda a Sexta: 9h às 19h <br /> Sábado: 9h às 17h <br /> Domingo: Fechado</p>
+    </section>
+</main>
