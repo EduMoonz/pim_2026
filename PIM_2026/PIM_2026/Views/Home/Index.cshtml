@@ -1,37 +1,35 @@
 ﻿@{
-    ViewData["Title"] = "Style System";
+    ViewData["Title"] = "Página Inicial";
 }
 
 <main>
-    
     <section class="hero">
         <h1>Erika Santana</h1>
-        <p>Especialista em manicure e nail design</p>
-        <p>Transformo suas unhas em verdadeiras obras de arte!</p>
+        <p class="subtitulo">Especialista em manicure e nail design</p>
+        <p class="descricao">Atendimento personalizado, esmaltação impecável e unhas que valorizam sua beleza.</p>
             
-        <a asp-controller="Login" asp-action="Index" class="btn btn-rosa">Agende seu horário</a>
-        <a asp-controller="Conta" asp-action="Cadastro" class="btn btn-rosa">Cadastro</a>
+        <a asp-controller="Conta" asp-action="Cadastro" class="btn btn-rosa">Agende seu horário</a>
     </section>
 
         
     <section class="servicos">
         <h2>Serviços oferecidos</h2>
-        <p>Confira nossos principais serviços</p>
+        <p>Confira alguns dos nossos serviços</p>
 
         <div class="row">
             <div class="col-md-6">
                 <div class="card-servico">
                     <h3>Manicure Completa</h3>
-                    <p>R$45,00 </p>
-                    <p>45 min</p>
+                    <p>Cuidados com cutículas, lixamento, esmaltação e acabamento profissional para unhas bonitas e bem cuidadas.</p>
+                    <span>R$45,00 • 45 min</span>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="card-servico">
                     <h3>Pedicure Completa</h3>
-                    <p>R$50,00</p>
-                    <p>60min</p>
+                    <p>Cuidados com cutículas, lixamento, hidratação e esmaltação para pés bonitos, saudáveis e bem cuidados.</p>
+                    <span>R$50,00 • 60 min</span>
                 </div>
             </div>
         </div>

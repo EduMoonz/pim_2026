@@ -1,0 +1,150 @@
+@{
+    ViewData["Title"] = "Agendamento";
+}
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Agende seu Horário</h2>
+
+    <div class="card shadow p-4">
+
+        <form method="post" id="formAgendamento">
+
+            <!-- Serviço -->
+            <div class="mb-4">
+                <h4 class="mb-3">1. Escolha o serviço</h4>
+
+                <select class="form-select" name="servico" id="servico" required>
+                    <option value="">Selecione um serviço</option>
+
+                    <optgroup label="Serviços para Mão">
+                        <option>Manicure Tradicional</option>
+                        <option>Esmaltação em Gel</option>
+                        <option>Alongamento de Unhas</option>
+                        <option>Cuticulagem</option>
+                        <option>Remoção do alongamento</option>
+                    </optgroup>
+
+                    <optgroup label="Serviços para Pé">
+                        <option>Pedicure Tradicional</option>
+                        <option>Spa dos Pés</option>
+                        <option>Hidratação dos Pés</option>
+                        <option>Cuticulagem dos Pés</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <!-- Data -->
+            <div class="mb-4">
+                <h4 class="mb-3">2. Escolha a data</h4>
+
+                <input type="date" class="form-control" name="data" id="data" required>
+            </div>
+
+            <!-- Horário -->
+            <div class="mb-4">
+                <h4 class="mb-3">3. Escolha o horário</h4>
+
+                <select class="form-select" name="horario" id="horario" required>
+                    <option value="">Selecione um horário</option>
+                    <option>09:00</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                </select>
+            </div>
+
+            <!-- Botões -->
+            <div class="d-flex gap-3">
+                <button type="button"
+                        class="btn btn-success"
+                        onclick="abrirModal()">
+                    Confirmar Agendamento
+                </button>
+
+                <button type="reset" class="btn btn-outline-secondary">
+                    Cancelar
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalAgendamento" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Agendamento Confirmado</h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>Seu agendamento foi realizado com sucesso.</p>
+
+                <hr>
+
+                <p>
+                    <strong>Serviço:</strong>
+                    <span id="resumoServico"></span>
+                </p>
+
+                <p>
+                    <strong>Data:</strong>
+                    <span id="resumoData"></span>
+                </p>
+
+                <p>
+                    <strong>Horário:</strong>
+                    <span id="resumoHorario"></span>
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <a asp-controller="Agendamento"
+                       asp-action="MeusAgendamentos"
+                       class="btn btn-dark">
+                    Meus Agendamentos
+                </a>
+
+                <button type="button"
+                        class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">
+                    Fechar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function abrirModal() {
+
+        let servico = document.getElementById("servico").value;
+        let data = document.getElementById("data").value;
+        let horario = document.getElementById("horario").value;
+
+        if (servico === "" || data === "" || horario === "") {
+            alert("Preencha todos os campos antes de continuar.");
+            return;
+        }
+
+        document.getElementById("resumoServico").innerText = servico;
+        document.getElementById("resumoData").innerText = data;
+        document.getElementById("resumoHorario").innerText = horario;
+
+        let modal = new bootstrap.Modal(
+            document.getElementById("modalAgendamento")
+        );
+
+        modal.show();
+    }
+</script>

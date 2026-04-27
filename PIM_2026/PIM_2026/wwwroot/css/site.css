@@ -41,25 +41,17 @@ html {
    CSS PERSONALIZADO DO PROJETO
 ========================================= */
 
-/* Importando fonte */
+/* Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Reset mais seguro */
+/* Reset */
 * {
     box-sizing: border-box;
 }
 
-.btn-rosa {
-    background-color: #ff69b4;
-    border-color: #ff69b4;
-    color: white;
+a {
+    text-decoration: none;
 }
-
-    .btn-rosa:hover {
-        background-color: #e754a3;
-        border-color: #e754a3;
-        color: white;
-    }
 
 /* Corpo principal */
 body {
@@ -77,11 +69,63 @@ main {
     padding: 40px 0;
 }
 
-/* Hero Section */
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-custom {
+    background: #fff;
+    padding: 18px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d97b93 !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #444 !important;
+    transition: 0.3s;
+}
+
+    .nav-link:hover {
+        color: #d97b93 !important;
+    }
+
+
+/* =========================================
+   BOTÃO ROSA
+========================================= */
+
+.btn-rosa {
+    background: #d97b93;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+    .btn-rosa:hover {
+        background: #c96580;
+        color: white;
+    }
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: #ffe4ec;
+    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 20px;
     margin-bottom: 50px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -98,25 +142,15 @@ main {
         margin-bottom: 10px;
     }
 
-    .hero button {
+    .hero .btn-rosa {
         margin-top: 20px;
-        padding: 14px 32px;
-        border: none;
-        border-radius: 12px;
-        background-color: #c2185b;
-        color: white;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: 0.3s;
     }
 
-        .hero button:hover {
-            background-color: #a3154a;
-            transform: scale(1.03);
-        }
 
-/* Seções */
+/* =========================================
+   SEÇÕES GERAIS
+========================================= */
+
 section {
     margin-bottom: 60px;
 }
@@ -132,7 +166,11 @@ section {
         color: #666;
     }
 
-/* Serviços */
+
+/* =========================================
+   SERVIÇOS
+========================================= */
+
 .servicos {
     text-align: center;
 }
@@ -144,6 +182,11 @@ section {
     margin: 20px 0;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
     transition: 0.3s;
+    /* Mantém os cards alinhados */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
     .card-servico:hover {
@@ -155,7 +198,20 @@ section {
         margin-bottom: 10px;
     }
 
-/* Localização */
+    .card-servico p {
+        margin-bottom: 15px;
+    }
+
+    .card-servico span {
+        font-weight: 600;
+        color: #444;
+    }
+
+
+/* =========================================
+   LOCALIZAÇÃO
+========================================= */
+
 .localizacao {
     background: #fff;
     padding: 35px;
@@ -168,7 +224,11 @@ section {
         color: #444;
     }
 
-/* Responsividade */
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
 @media (max-width: 768px) {
     .hero {
         padding: 50px 20px;
@@ -182,7 +242,9 @@ section {
         font-size: 1.6rem;
     }
 
-    .hero button {
+    .hero .btn-rosa {
         width: 100%;
+        display: block;
+        margin-bottom: 10px;
     }
 }

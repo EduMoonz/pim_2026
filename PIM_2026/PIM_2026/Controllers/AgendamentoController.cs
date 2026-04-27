@@ -2,7 +2,7 @@
 
 namespace PIM_2026.Controllers
 {
-    public class LoginController : Controller
+    public class AgendamentoController : Controller
     {
         public IActionResult Index()
         {
