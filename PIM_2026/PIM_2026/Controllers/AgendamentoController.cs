@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PIM_2026.Models;
 
 namespace PIM_2026.Controllers
 {
@@ -8,5 +9,21 @@ namespace PIM_2026.Controllers
         {
             return View();
         }
+
+        public IActionResult Confirmacao()
+        {
+         return View();   
+        }
+
+         [HttpPost] public IActionResult Salvaragendamento(Agendamento agendamento)
+        {
+            agendamento.Idcliente = 1;
+            agendamento.Idprofissional = 1;
+            agendamento.Status = "Pendente";
+            
+            return RedirectToAction("Confirmacao");
+        }
     }
 }
+
+   
