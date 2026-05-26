@@ -103,33 +103,26 @@
 <!--Script para as abas de agendamento-->
 <script>
     function irParaAba(idAba) {
-
         const trigger = document.querySelector(
             `[data-bs-target="#${idAba}"]`
         );
-
         bootstrap.Tab.getOrCreateInstance(trigger).show();
     }
 
     // VALIDAR PROCEDIMENTO
     function validarProcedimento() {
-
         const servico =
             document.getElementById("servico").value;
 
         if (servico === "") {
-
             alert("Selecione um serviço para continuar.");
-
             return;
         }
-
         irParaAba('dataHorario');
     }
 
     // VALIDAR DATA E HORÁRIO
     function validarDataHorario() {
-
         const data =
             document.getElementById("data").value;
 
@@ -137,18 +130,14 @@
             document.getElementById("horario").value;
 
         if (data === "" || horario === "") {
-
             alert("Selecione a data e o horário.");
-
             return;
         }
-
         mostrarResumo();
     }
 
     // MOSTRAR RESUMO
     function mostrarResumo() {
-
         document.getElementById("resumoServico").innerText =
             document.getElementById("servico").value;
 

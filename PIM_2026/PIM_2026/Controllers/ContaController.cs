@@ -10,7 +10,7 @@ namespace PIM_2026.Controllers
             return View();
         }
 
-        //Login do usuario
+        //Login do usuarioS
         [HttpPost]
         public IActionResult Login(string email, string senha)
         {
