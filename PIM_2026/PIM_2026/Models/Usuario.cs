@@ -1,12 +1,10 @@
 namespace PIM_2026.Models
 {
-    public class Usuario
+    public abstract class Usuario
     {
         // ENCAPSULAMENTO
         private string senha;
-
         public string Nome { get; set; }
-
         public string Email { get; set; }
 
         // propriedade encapsulada
@@ -24,9 +22,6 @@ namespace PIM_2026.Models
         }
 
         // POLIMORFISMO
-        public virtual string TipoUsuario()
-        {
-            return "Usuário";
-        }
+        public abstract string TipoUsuario();
     }
 }
