@@ -1,4 +1,4 @@
-/* CSS padrão do ASP.net */
+/* CSS padrão do ASP.NET */
 html {
     font-size: 14px;
     position: relative;
@@ -25,7 +25,7 @@ html {
 }
 
 
-/*BASE DO PROJETO*/
+/* Base do projeto */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -67,16 +67,43 @@ main {
 }
 
 
-/*Barra de navegação*/
+/* Classes reutilizáveis */
+.fundo-rosa {
+    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
+}
 
+.sombra-padrao {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.titulo-padrao {
+    color: #c2185b;
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    border-radius: 14px;
+    padding: 14px 16px;
+    border: 1px solid #f3c7d3;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #d97b93;
+        box-shadow: 0 0 0 0.2rem rgba(217,123,147,0.2);
+    }
+
+
+/* Barra de navegação */
 .navbar-custom {
     background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     padding: 12px 20px;
     min-height: 80px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .navbar-brand {
@@ -147,7 +174,7 @@ main {
     }
 
 
-/*Botões*/
+/* Botões */
 .btn-rosa {
     background: #d97b93;
     color: white;
@@ -178,14 +205,14 @@ main {
     }
 
 
-/*Tela Home*/
+/* Tela Home */
 .hero {
     text-align: center;
     padding: 80px 20px;
     background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 20px;
     margin-bottom: 50px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
     .hero h1 {
@@ -219,18 +246,23 @@ section {
         font-size: 1.4rem;
     }
 
+.servicos,
+.localizacao {
+    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
 .servicos {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
-    border-radius: 20px;
 }
 
 .card-servico {
     background: white;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     transition: 0.3s;
     height: 100%;
     margin: 15px;
@@ -262,7 +294,6 @@ section {
     .texto-card p {
         color: #555;
         margin-bottom: 1.4rem;
-        line-height: 1.6;
         font-size: 1.2rem;
     }
 
@@ -273,10 +304,7 @@ section {
     }
 
 .localizacao {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
 }
 
     .localizacao h2 {
@@ -348,21 +376,28 @@ section {
     }
 
 
-/* Tela de Login/Cadastro*/
+/* Login, cadastro e formulários */
 .container-formulario {
     align-items: flex-start;
     padding-top: 60px;
 }
 
-.card-login {
+.card-login,
+.card-agendamento,
+.card-confirmacao,
+.card-agenda,
+.card-resumo,
+.card-meu-agendamento {
     background: linear-gradient(135deg, #ffe4ec, #fff8fb);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card-login {
     border-radius: 28px;
     padding: 35px;
     width: 100%;
     max-width: 430px;
     border: 1px solid rgba(255,255,255,0.4);
-    box-shadow: 0 10px 30px rgba(217,123,147,0.15), 0 4px 12px rgba(0,0,0,0.05);
-    transition: 0.3s;
 }
 
     .card-login h3 {
@@ -372,17 +407,8 @@ section {
     }
 
     .card-login .form-control {
-        border-radius: 14px;
-        padding: 14px 16px;
-        border: 1px solid #f3c7d3;
         background: rgba(255,255,255,0.8);
-        transition: 0.3s;
     }
-
-        .card-login .form-control:focus {
-            border-color: #d97b93;
-            box-shadow: 0 0 0 0.2rem rgba(217,123,147,0.2);
-        }
 
     .card-login .nav-tabs {
         border: none;
@@ -402,18 +428,15 @@ section {
             .card-login .nav-tabs .nav-link.active {
                 background: linear-gradient(135deg, #d97b93, #c96580);
                 color: white !important;
-                box-shadow: 0 4px 10px rgba(217,123,147,0.25);
             }
 
 
-/*Tela de agendamento*/
+/* Tela de agendamento */
 .card-agendamento {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 28px;
     padding: 35px;
     width: 100%;
     max-width: 850px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
     .card-agendamento h2 {
@@ -425,19 +448,6 @@ section {
         color: #444;
         font-weight: 600;
     }
-
-    .card-agendamento .form-control,
-    .card-agendamento .form-select {
-        border-radius: 14px;
-        padding: 14px 16px;
-        border: 1px solid #f3c7d3;
-    }
-
-        .card-agendamento .form-control:focus,
-        .card-agendamento .form-select:focus {
-            border-color: #d97b93;
-            box-shadow: 0 0 0 0.2rem rgba(217,123,147,0.2);
-        }
 
     .card-agendamento .nav-pills {
         gap: 10px;
@@ -466,7 +476,7 @@ section {
 }
 
 
-/* Telas de confirmação (agendamento e cadastro de serviço/horario*/
+/* Telas de confirmação */
 .container-confirmacao {
     min-height: calc(100vh - 140px);
     display: flex;
@@ -476,12 +486,10 @@ section {
 }
 
 .card-confirmacao {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 28px;
     padding: 45px 35px;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .titulo-confirmacao {
@@ -491,12 +499,13 @@ section {
 }
 
 
-/*Tela Meus Agendamentos*/
+/* Meus agendamentos */
 .container-agendamentos {
     padding: 40px 15px;
 }
 
-.titulo-pagina {
+.titulo-pagina,
+.titulo-admin {
     color: #c2185b;
     font-weight: 700;
 }
@@ -507,10 +516,8 @@ section {
 }
 
 .card-meu-agendamento {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(217,123,147,0.12), 0 4px 10px rgba(0,0,0,0.05);
 }
 
     .card-meu-agendamento:hover {
@@ -571,12 +578,10 @@ section {
     }
 
 
-/*Tela Agenda diária*/
+/* Agenda diária */
 .card-agenda {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 24px;
     padding: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .agenda-item {
@@ -636,23 +641,16 @@ section {
 }
 
 
-/* Telas do Admin*/
-.titulo-admin {
-    color: #c2185b;
-    font-weight: 700;
-}
-
+/* Telas do admin */
 .subtitulo-admin {
     color: #444;
     font-weight: 600;
 }
 
 .card-resumo {
-    background: linear-gradient(135deg, #ffe4ec, #fff8fb);
     border-radius: 20px;
     padding: 25px;
     max-width: 260px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
     .card-resumo h5 {
@@ -685,8 +683,7 @@ section {
     }
 
 
-/*Footer*/
-
+/* Footer */
 .footer {
     position: static !important;
     width: 100%;
@@ -699,10 +696,8 @@ section {
 }
 
 
-/*Responsividade*/
-
+/* Responsividade */
 @media (max-width: 992px) {
-
     main {
         width: 95%;
         padding: 20px 0;
@@ -738,7 +733,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
     html {
         font-size: 15px;
     }
@@ -767,6 +761,23 @@ section {
         margin-top: 15px;
     }
 
+        .navbar-collapse .dropdown {
+            width: 100%;
+        }
+
+            .navbar-collapse .dropdown .btn-rosa {
+                width: 100%;
+                text-align: center;
+            }
+
+        .navbar-collapse .dropdown-menu {
+            position: static !important;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
     .hero {
         padding: 45px 20px;
         border-radius: 15px;
@@ -774,14 +785,15 @@ section {
 
         .hero h1 {
             font-size: 1.9rem;
-            line-height: 1.3;
         }
 
-        .hero p {
+        .hero p,
+        section > p {
             font-size: 1rem;
         }
 
-        .hero .btn-rosa {
+        .hero .btn-rosa,
+        .btn-rosa {
             width: 100%;
         }
 
@@ -796,7 +808,6 @@ section {
 
         section > p {
             text-align: center;
-            font-size: 1rem;
         }
 
     .servicos .row {
@@ -815,10 +826,7 @@ section {
         padding: 20px;
     }
 
-        .texto-card h3 {
-            font-size: 1.2rem;
-        }
-
+        .texto-card h3,
         .texto-card p,
         .texto-card span {
             font-size: 1rem;
@@ -844,10 +852,6 @@ section {
         margin-top: 5px;
     }
 
-    .btn-rosa{
-        width: 100%;
-    }
-
     .botoes-acoes {
         display: flex;
         flex-direction: column;
@@ -862,7 +866,8 @@ section {
         font-size: 0.9rem;
     }
 
-    .card {
+    .card,
+    .card-body {
         border-radius: 16px;
     }
 
@@ -875,13 +880,20 @@ section {
         font-size: 16px;
     }
 
-    .card-agendamento {
+    .card-agendamento,
+    .card-login,
+    .card-confirmacao {
         padding: 25px;
         border-radius: 22px;
     }
 
         .card-agendamento h2 {
             font-size: 2rem;
+        }
+
+        .card-login h3,
+        .titulo-confirmacao {
+            font-size: 1.6rem;
         }
 
         .card-agendamento .nav-pills {
@@ -898,13 +910,7 @@ section {
     }
 
     .card-confirmacao {
-        padding: 35px 25px;
-        border-radius: 22px;
         text-align: center;
-    }
-
-    .titulo-confirmacao {
-        font-size: 1.6rem;
     }
 
     .container-agendamentos {
@@ -926,29 +932,20 @@ section {
         padding-bottom: 40px;
     }
 
-    .card-login {
-        padding: 25px;
-        border-radius: 22px;
+    .card-login .nav-tabs {
+        display: flex;
+        justify-content: center;
     }
 
-        .card-login h3 {
-            font-size: 1.6rem;
+        .card-login .nav-tabs .nav-item {
+            flex: 1;
         }
 
-        .card-login .nav-tabs {
-            display: flex;
-            justify-content: center;
+        .card-login .nav-tabs .nav-link {
+            width: 100%;
+            text-align: center;
+            padding: 10px 8px;
         }
-
-            .card-login .nav-tabs .nav-item {
-                flex: 1;
-            }
-
-            .card-login .nav-tabs .nav-link {
-                width: 100%;
-                text-align: center;
-                padding: 10px 8px;
-            }
 
     .card-agenda {
         padding: 20px;
@@ -975,7 +972,6 @@ section {
 }
 
 @media (max-width: 480px) {
-
     .navbar-brand {
         font-size: 1.1rem;
     }
